@@ -1,0 +1,23 @@
+name: Build docs
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - docs/**
+      - .github/workflows/docker-docs.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker/build-push-action@v1
+        with:
+          dockerfile: docs/Dockerfile-prod
+          path: docs
+          username: jamct
+          password: ${{ secrets.GITHUB_TOKEN }}
+          repository: jamct/kubernetes-training/k8s-docs
+          registry: docker.pkg.github.com
+          tags: latest

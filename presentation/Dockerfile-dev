@@ -1,0 +1,14 @@
+FROM node:14-alpine
+
+WORKDIR /var/run
+
+RUN apk add git
+RUN git clone https://github.com/hakimel/reveal.js.git
+RUN cd reveal.js && npm install
+
+WORKDIR /var/run/reveal.js
+
+COPY index.html index.html
+COPY slides/ slides/
+
+CMD npm start

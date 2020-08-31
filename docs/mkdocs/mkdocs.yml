@@ -1,0 +1,23 @@
+site_name: Kubernetes-Einstieg
+dev_addr: "0.0.0.0:8080"
+theme: "flatly"
+site_author: "Jan Mahn (c't magazin)"
+extra_css:
+    - css/extra.css
+markdown_extensions:
+    - attr_list
+    - admonition
+    - fontawesome_markdown
+# plugins:
+#     - pdf-export:
+#           verbose: true
+#           media_type: print
+#           combined: true
+nav:
+    - Willkommen: index.md
+    - Labs:
+          - "Lab 1: Das erste Custer": lab1/index.md
+          - "Lab 2: Kubectl, der Freund und Helfer": lab2/index.md
+          - "Lab 3: Der erste Dienst im Cluster": lab3/index.md
+          - "Lab 4: Einblicke und Ausblick": lab4/index.md
+    - Infos: about/index.md

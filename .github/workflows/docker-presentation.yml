@@ -1,0 +1,23 @@
+name: Build presentation
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - presentation/**
+      - .github/workflows/docker-presentation.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker/build-push-action@v1
+        with:
+          dockerfile: presentation/Dockerfile-prod
+          path: presentation
+          username: jamct
+          password: ${{ secrets.GITHUB_TOKEN }}
+          repository: jamct/kubernetes-training/k8s-presentation
+          registry: docker.pkg.github.com
+          tags: latest

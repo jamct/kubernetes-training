@@ -1,0 +1,16 @@
+FROM node:14-alpine
+LABEL maintainer="jam@ct.de"
+
+WORKDIR /var/run
+
+RUN apk add git
+RUN git clone https://github.com/hakimel/reveal.js.git
+RUN cd reveal.js && npm install
+
+WORKDIR /var/run/reveal.js
+
+COPY index.html /var/run/reveal.js/index.html
+COPY slides/ /var/run/reveal.js/slides/
+
+EXPOSE 80
+CMD npm start -- --port=80

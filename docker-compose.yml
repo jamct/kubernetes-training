@@ -1,0 +1,40 @@
+version: "3.7"
+services:
+  traefik:
+    image: traefik:v2.2
+    command: --providers.docker
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+      - ./traefik/static.yml:/etc/traefik/traefik.yml
+      - ./traefik/dynamic.yml:/etc/traefik/dynamic/dynamic.yml
+      - ./traefik/acme.json:/etc/traefik/acme/acme.json
+
+  docs:
+    image: docker.pkg.github.com/jamct/docker-training/docs:latest
+    restart: always
+    labels:
+      - traefik.http.routers.docs.rule=Host(`${DOCS_DOMAIN}`)
+      - "traefik.http.routers.docs.tls.certResolver=default"
+      - "traefik.http.routers.docs.tls=true"
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  presentation:
+    image: docker.pkg.github.com/jamct/docker-training/presentation:latest
+    restart: always
+    labels:
+      - traefik.http.routers.presentation.rule=Host(`${PRESENTATION_DOMAIN}`)
+      - "traefik.http.routers.presentation.tls.certResolver=default"
+      - "traefik.http.routers.presentation.tls=true"
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  watchtower:
+    image: containrrr/watchtower
+    command: --cleanup --label-enable
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.docker/config.json:/config.json
