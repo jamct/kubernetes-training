@@ -15,7 +15,16 @@
 
 ---
 
-# Warum wir Container nutzen
+## Das Ziel für heute und morgen
+
+* ein eigenes Cluster einrichten
+* Dienste im Cluster betreiben
+* nützliche Grundfunktionen kennenlernen
+
+---
+
+
+## Warum wir Container nutzen
 
 Es geht um:  <!-- .element: class="fragment" data-fragment-index="1" -->
 * Flexibilität <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -30,11 +39,11 @@ Es geht um:  <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
-# Der typische Docker-Host
+## Der typische Docker-Host
 
-* enthält eine Sammlung an Docker-Compose-Dateien  <!-- .element: class="fragment" data-fragment-index="1" -->
-* auf dem Docker-Host wird mit `docker` und `docker-compose gearbeitet` <!-- .element: class="fragment" data-fragment-index="2" -->
-* nach einiger Zeit baut man wieder eine Beziehung zum Server auf und pflegt ihn mehr, als man eigentlich wollte <!-- .element: class="fragment" data-fragment-index="3" -->
+* enthält eine Sammlung an Docker-Compose-Dateien 
+* auf dem Docker-Host wird mit `docker` und `docker-compose gearbeitet` 
+* nach einiger Zeit baut man wieder eine Beziehung zum Server auf und pflegt ihn mehr, als man eigentlich wollte
 
 ---
 
@@ -47,15 +56,33 @@ Es geht um:  <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
+## Wem gehört Kubernetes?
+
+* erfunden von Google, ab 2014
+* Open-Source seit 1.7.2015
+* gespendet an die CNCF, Teil der Linux Foundation
+* 2820 Contributors bei GitHub
+* Mitarbeit durch alle großen und viele kleine Cloud-Unternehmen
+
+---
+
+![ ](./slides/stats.png)
+
+---
+
+## Strategien zum Lernen von K8S
+
+---
+
 ## Kubernetes: Containern weiter gedacht
 
 Mit einem Kubernetes-Cluster:
 
-* beschreiben Sie Ihre gewünschte Infrastruktur, meist in YAML. <!-- .element: class="fragment" data-fragment-index="1" -->
-* konfigurieren Sie Details, die in `docker-compose` fehlen. <!-- .element: class="fragment" data-fragment-index="2" -->
-* lassen Sie Container auf Funktion prüfen und ersetzen. <!-- .element: class="fragment" data-fragment-index="3" -->
-* skalieren Sie Dienste, wenn die Last höher wird <!-- .element: class="fragment" data-fragment-index="4" -->
-* verteilen Sie die Last auf viele Maschinen <!-- .element: class="fragment" data-fragment-index="5" -->
+* beschreiben Sie Ihre gewünschte Infrastruktur, meist in YAML.
+* konfigurieren Sie Details, die in `docker-compose` fehlen.
+* lassen Sie Container auf Funktion prüfen und ersetzen. 
+* skalieren Sie Dienste, wenn die Last höher wird.
+* verteilen Sie die Last auf viele Maschinen.
 
 ---
 
@@ -63,7 +90,7 @@ Mit einem Kubernetes-Cluster:
 
 * Läuft auf mehreren Hosts (max. 5000 pro Cluster)
 * ist auf Skalierbarkeit ausgelegt
-* Arbeitet deklarativ, nicht imperativ
+* Arbeitet (meist) deklarativ, nicht imperativ
 
 --- 
 
@@ -107,12 +134,19 @@ Alle Workshop-Inhalte finden Sie unter [docs.liefer.it](https://docs.liefer.it)
 ## Begriffskunde
 
 * **Nodes** sind Server mit installiertem Kubernetes, zu einem Cluster verbunden
-* **Pods** sind die kleinste verteilbare Einheit. Sie können aus mehreren **Containern** bestehen. 
+* **Pods** sind die kleinste verteilbare Einheit. Sie können aus mehreren **Containern** bestehen.
 * **Services** sind die Weiterentwicklung von `ports` in einer Docker-Umgebung. Sie erlauben elegantes Loadbalancing
 
 ---
 
-![ ](node.png)
+## Was sind Pods?
+![ ](./slides/node.png)
+
+---
+
+## Lab 3: Der erste Dienst im Cluster
+
+Alle Workshop-Inhalte finden Sie unter [docs.liefer.it](https://docs.liefer.it)
 
 ---
 
