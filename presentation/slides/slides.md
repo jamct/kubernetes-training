@@ -144,6 +144,64 @@ Alle Workshop-Inhalte finden Sie unter [docs.liefer.it](https://docs.liefer.it)
 
 ---
 
+## Einen Container ausrollen
+
+Mit docker-compose
+```
+services:
+  whoami:
+    image: containous/whoami
+    ports:
+      - 80:80
+```
+
+---
+
+Mit Kubernetes:
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whoami-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: whoami
+  template:
+    metadata:
+      labels:
+        app: whoami
+    spec:
+      containers:
+      - image: containous/whoami
+        imagePullPolicy: Always
+        name: whoami
+        ports:
+        - containerPort: 80
+```
+---
+... und weiter geht es:
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: whoami-service
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    app: whoami
+  ports:
+  - protocol: TCP
+    nodePort: 30000
+    port: 8000
+    targetPort: 80
+```
+---
+
 ## Lab 3: Der erste Dienst im Cluster
 
 Alle Workshop-Inhalte finden Sie unter [docs.liefer.it](https://docs.liefer.it)

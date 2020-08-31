@@ -116,3 +116,27 @@ Wenn Sie dem `RollingUpdate` bei der Arbeit zusehen wollen, ändern Sie den Tag 
 Anschließend schreiben Sie die Änderungen wie gewohnt. Beobachten Sie den Ausrollprozess (schnell sein hilft). Wenn Sie den Moment verpasst haben, so sieht es in etwa aus:
 
 ![ ](./rolling.png)
+
+## Keine Panik bei Problemen
+
+Fehler kommen vor, auch wenn Sie vorher gründlich im Dev-System getestet haben. Wenn ein Update mal so gar nicht rund läuft, können Sie es mit `kubectl` zügig rückgängig machen. Kubernetes merkt sich die Geschichte Ihrer Änderungen.
+
+So zeigen Sie die Änderungen an:
+
+```
+kubectl rollout history deployment/whoami-deployment
+```
+
+So zeigen Sie an, was sich in einer Revision geändert hat:
+
+```
+kubectl rollout history deployment/whoami-deployment --revision=3
+```
+
+Und so machen Sie die letzte Revision rückgängig:
+
+```
+kubectl rollout undo deployment/whoami-deployment
+```
+
+Wenn Sie den letzten Befehl ausprobieren, wechselt das Deplyment wieder zurück auf den `latest`-Tag für den Container `whoami`.

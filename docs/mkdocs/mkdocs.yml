@@ -19,5 +19,5 @@ nav:
           - "Lab 1: Das erste Custer": lab1/index.md
           - "Lab 2: Kubectl, der Freund und Helfer": lab2/index.md
           - "Lab 3: Der erste Dienst im Cluster": lab3/index.md
-          - "Lab 4: Einblicke und Ausblick": lab4/index.md
+          - "Lab 4: Ausblick und Einblicke": lab4/index.md
     - Infos: about/index.md
