@@ -59,3 +59,27 @@ Zum Beispiel:
 ```
 kubectl exec -it test-234234 sh
 ```
+
+## Private Registries
+
+Nicht immer sind alle Images öffentlich. Dann müssen Sie ein Secret im Cluster ablegen, das ein Token für die Registry Ihrer Wahl enthält.
+
+Melden Sie sich zunächst auf der lokalen Maschine mit `docker login` an der Registry an. Schauen Sie dann in die Datei `~/.docker/config.json`
+
+Schreiben Sie den Inhalt als Secret ins Cluster:
+
+```
+kubectl create secret generic my-docker-secret \
+    --from-file=.dockerconfigjson=~/.docker/config.json \
+    --type=kubernetes.io/dockerconfigjson
+```
+
+In der Definition eines Pods übergeben Sie das Secret als `imagePullSecrets`. Es kann dann für alle Container des Pods verwendet werden:
+
+```
+  containers:
+  - name: mein-server
+    image: private-registry/privat:latest
+  imagePullSecrets:
+  - name: my-docker-secret
+```
