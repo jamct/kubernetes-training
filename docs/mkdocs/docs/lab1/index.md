@@ -58,7 +58,7 @@ Auf der zweiten Maschine müssen Sie ebenfalls K3S herunterladen und zwei Werte 
 Ändern Sie diese beiden Angaben in der folgenden Zeile:
 
 ```
-curl -sfL https://get.k3s.io | K3S_TOKEN=verySecretToken INSTALL_K3S_EXEC="--server https://10.20.0.3:6443" sh -
+curl -sfL https://get.k3s.io | K3S_TOKEN=verySecretToken INSTALL_K3S_EXEC="--disable traefik --server https://10.20.0.3:6443" sh -
 ```
 
 Nach weiteren drei Minuten ist Ihr Cluster einsatzbereit.

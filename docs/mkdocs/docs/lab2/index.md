@@ -148,7 +148,7 @@ Jetzt müssen Sie die Zugangsdaten Ihres K3S-Clusters beschaffen. K3S legt diese
 cat /etc/rancher/k3s/k3s.yaml
 ```
 
-Haben Sie keine anderen Cluster lokal, kopieren Sie die ganze Datei nach `~/kube/config` (unter Windows am besten mit einer PowerShell mit Adminrechten). Ändern müssen Sie nur die Adresse von 127.0.0.1:6443 auf die Adresse Ihres Demo-Servers.
+Haben Sie keine anderen Cluster lokal, kopieren Sie die ganze Datei nach `~/.kube/config` (unter Windows am besten mit einer PowerShell mit Adminrechten). Ändern müssen Sie nur die Adresse von 127.0.0.1:6443 auf die Adresse Ihres Demo-Servers.
 
 Haben Sie bereits andere Cluster lokal eingerichtet, müssen Sie jetzt etwas im Texteditor puzzlen. Kopieren Sie zunächst den Abschnitt mit  dem `-cluster` heraus und setzen ihn ein. Ändern Sie die Adresse auf die externe Adresse und achten Sie darauf, dem Cluster einen neuen Namen zu geben, falls `default` schon vergeben ist. Nennen Sie das Cluster etwa `demo`
 

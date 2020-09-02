@@ -23,13 +23,12 @@
 
 ---
 
-
 ## Warum wir Container nutzen
 
-Es geht um:  <!-- .element: class="fragment" data-fragment-index="1" -->
-* Flexibilität <!-- .element: class="fragment" data-fragment-index="2" -->
-* Ersetzbare Server <!-- .element: class="fragment" data-fragment-index="3" -->
-* Weniger Ärger mit Abhängigkeiten <!-- .element: class="fragment" data-fragment-index="4" -->
+Es geht um:
+* Flexibilität
+* Ersetzbare Server
+* Weniger Ärger mit Abhängigkeiten
 
 --- 
 

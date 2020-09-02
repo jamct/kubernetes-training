@@ -20,4 +20,8 @@ nav:
           - "Lab 2: Kubectl, der Freund und Helfer": lab2/index.md
           - "Lab 3: Der erste Dienst im Cluster": lab3/index.md
           - "Lab 4: Ausblick und Einblicke": lab4/index.md
+          - "Lab 5: HTTP-Router": lab5/index.md
+          - "Lab 6: Nextcloud": lab6/index.md
+          - "Lab 7: Tipps für Entwickler und zum Debuggen": lab7/index.md
+
     - Infos: about/index.md

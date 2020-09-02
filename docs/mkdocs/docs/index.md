@@ -20,5 +20,18 @@ Herzlich Willkommen zum Workshop "Kubernetes-Einstieg für Docker-Nutzer"
 | |[Lab 3: Der erste Dienst](lab3/index.md)|
 | |[Lab 4: Einblicke und Ausblick](lab4/index.md)|
 |12:00|Fragen zu Tag 1|
-|12:30|Ende Tag 1|
+|12:30|Ende von Tag 1|
+
+### Tag 2 
+
+|Zeit| |
+|---|---|
+|9:00|Fragen vom Vortag|
+| |[Lab 4: Einblicke und Ausblick](lab4/index.md)|
+| |[Lab 5: Ein HTTP-Router](lab5/index.md)|
+| |[Lab 6: Ein komplexeres Projekt](lab6/index.md)|
+| |[Lab 7: Helm – ein Verpackungskünstler](lab7/index.md)|
+| |Zusammenfassung: Volumes, Deployments, Services, Ingress|
+|12:00|Fragen zu Tag 2|
+|12:30|Ende von Tag 2|
 
