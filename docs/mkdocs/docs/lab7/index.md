@@ -1,5 +1,6 @@
 # :fa-flask: Lab 7: Entwickler-Freuden und Debugging-Tipps
 
+Zum Abschluss ein paar nützliche Hilfsmittel, die Ihnen den Alltag erleichtern werden (in der Reihenfolge ihres Vorkommens in der Veranstaltung).
 
 ## Liveness-Probes
 
@@ -60,7 +61,11 @@ Zum Beispiel:
 kubectl exec -it test-234234 sh
 ```
 
-## Private Registries
+## Besuche aus der Ferne: Telepresence
+
+Manchmal kommt man mit dem lokalen Experimentiercluster nicht weiter, das man zum Beispiel mit Docker Desktop oder Minicube erzeugt. Dann würde man am liebsten einen lokalen Container in einem richtigen Cluster einpflanzen, um einen Fehler an Ort und Stelle zu finden. Genau das funktioniert mit [Telepresence](https://www.telepresence.io). Die Software hat ihre Tücken und wird aktiv weiterentwickelt. Das Prinzip: Auf der Entwicklermaschine wird ein Container gestartet (Docker muss installiert sein). Mit dem Kommandozeilenbefehle `kubectl` entsteht ein Platzhalter-Container im Cluster, der einen bestehenden Pod ersetzt. Dieser Platzhalter stellt die Verbindung zu Ihrem lokalen Pod her. Ihr lokaler Container läuft jetzt, als wäre er im Cluster.
+
+## Private Registrys
 
 Nicht immer sind alle Images öffentlich. Dann müssen Sie ein Secret im Cluster ablegen, das ein Token für die Registry Ihrer Wahl enthält.
 

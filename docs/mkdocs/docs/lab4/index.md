@@ -27,17 +27,13 @@ Sie haben mehrere Optionen, die Ausgabe zu ändern. Das übernimmt `-o`:
 
 Lens ist ein weiterer Zugang zum Cluster (oder zu mehreren). Lens ist eine Desktop-Anwendung, die es für Linux, Windows, macOS gibt. Lens bedient sich an der Konfig-Datei `~/.kube/config` und zeigt Details übersichtlich an.
 
-![Lens macht das Geschehen im Cluster schneller sichtbar. Die Anwendung läuft unter Windows, Linux, macOS.](lens.png)
-
 Herunterladen kann man [Lens bei GitHub](https://github.com/lensapp/lens/releases/tag/v3.5.3). Veröffentlicht ist sie unter MIT-Lizenz. Das Unternehmen, das sich Lens ausgedacht hat, gehört seit einigen Wochen zum mittlerweile recht bekannten Cloud-Dienstleister Mirantis (dem neuen Eigentümer von Docker Enterprise).
 
 ## Tiefer einsteigen: Angebote der CNCF
 
 Wer sich intensiver mit Kubernetes beschäftigt, sollte unbedingt einen Blick auf den Pfad jenseits der Kern-Funktionen werfen.
 
-Eine erste Anlaufstelle sind die Landscapes der CNCF:
-
-![ ](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)
+Eine erste Anlaufstelle ist der [Trail der CNCF](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)
 
 Wem das als Inspiration nicht reicht, der findet (fast) alle Projekte aus dem Ökosystem unter [https://landscape.cncf.io](https://landscape.cncf.io) (Achtung: Nicht verzetteln, die Karte ist sehr umfangreich!).
 

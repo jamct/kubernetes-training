@@ -213,7 +213,7 @@ ist es nicht getan. Stattdessen müssen Sie sich zuallererst entscheiden, wo die
 Für unsere Demo reicht das aus, in Produktion werden Sie sicher auf eine verteilte Lösung setzen wollen. Zum Glück gibt es viele Möglichkeiten, die Sie für Ihre konkrete Anwendung mal ausprobieren sollten. Folgende Anlaufstellen empfehlen wir:
 
 * [Die Kubernetes-Doku (immer eine gute Adresse, oft sehr detailliert...)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
-* [Das Projekt Longhorn (auch von Rancher)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
+* [Das Projekt Longhorn (auch von Rancher)](https://longhorn.io)
 
 Gute Ansätze: Wenn Sie irgendwo bereits NFS betreiben, gibt es eine `StorageClass` eingebaut. Longhorn ist eine einfache Lösung. Longorn wird selbst per `kubectl` verteilt.
 
@@ -236,6 +236,9 @@ spec:
 ```
 
 Speichern und deployen. Mit `kubectl get pvc` sollten Sie das Ergebnis sehen.
+
+!!! note "Local-Path"
+    In diesem Beispiel kommt Local-Path zum Einsatz. Diese `StorageClass` hat Rancher für K3S eingebaut. Es ist die minimale Implementierung einer `StorageClass`, die man am ehesten mit Volumes unter Docker vergleichen kann. Wunder sind davon nicht zu erwarten. Auf Multi-Node-Clustern ist Local-Path keine gute Idee. Er sorgt einfach dafür, dass ein Pod immer auf dem Node gescheduled wird, auf dem die Daten lokal liegen. Wenn dieser Node ausfällt, fehlen die Daten auf anderen Nodes. Außerhalb von Klein- und Testumgebungen sollten Sie eine andere `StorageClass`nutzen.
 
 ### Deployments
 

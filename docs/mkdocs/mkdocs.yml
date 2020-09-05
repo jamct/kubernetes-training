@@ -1,6 +1,6 @@
 site_name: Kubernetes-Einstieg
 dev_addr: "0.0.0.0:8080"
-theme: "flatly"
+theme: "material"
 site_author: "Jan Mahn (c't magazin)"
 extra_css:
     - css/extra.css
@@ -8,11 +8,11 @@ markdown_extensions:
     - attr_list
     - admonition
     - fontawesome_markdown
-# plugins:
-#     - pdf-export:
-#           verbose: true
-#           media_type: print
-#           combined: true
+plugins:
+    - pdf-export:
+          verbose: true
+          media_type: print
+          combined: true
 nav:
     - Willkommen: index.md
     - Labs:
@@ -23,5 +23,6 @@ nav:
           - "Lab 5: HTTP-Router": lab5/index.md
           - "Lab 6: Nextcloud": lab6/index.md
           - "Lab 7: Tipps für Entwickler und zum Debuggen": lab7/index.md
+          - "Lab 8: Verpacken mit Helm": lab8/index.md
 
     - Infos: about/index.md
