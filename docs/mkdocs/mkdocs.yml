@@ -8,11 +8,11 @@ markdown_extensions:
     - attr_list
     - admonition
     - fontawesome_markdown
-plugins:
-    - pdf-export:
-          verbose: true
-          media_type: print
-          combined: true
+# plugins:
+#     - pdf-export:
+#           verbose: true
+#           media_type: print
+#           combined: true
 nav:
     - Willkommen: index.md
     - Labs:
