@@ -1,6 +1,6 @@
 site_name: Kubernetes-Einstieg
 dev_addr: "0.0.0.0:8080"
-theme: "material"
+theme: "flatly"
 site_author: "Jan Mahn (c't magazin)"
 extra_css:
     - css/extra.css

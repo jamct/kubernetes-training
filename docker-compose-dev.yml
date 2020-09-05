@@ -3,7 +3,7 @@ services:
   docs:
     build:
       context: ./docs
-      dockerfile: Dockerfile-pdf
+      dockerfile: Dockerfile-dev
     ports:
       - 8080:8080
     volumes:
