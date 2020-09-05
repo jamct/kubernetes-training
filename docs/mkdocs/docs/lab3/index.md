@@ -65,7 +65,7 @@ kubectl -f deployment.yml apply
 
 * Prüfen Sie, ob der Pod erfolgreich erstellt wurde (`kubectl get pods`).
 * Finden Sie mit `kubectl describe pod` heraus, auf welchem Node der Pod läuft
-* Rufen Sie die Adresse der beiden Pods im Browser auf (`demo-0-1.liefer.it:30000`). Außerdem die gemeinsame DNS-Adresse (`www.0.liefer.it:30000`);
+* Rufen Sie die Adresse der beiden Pods im Browser auf (`demo-0-1.example.org:30000`). Außerdem die gemeinsame DNS-Adresse (`www.0.example.org:30000`);
 
 Kubernetes kümmert sich um das Routing zum Pod. Es ist egal, wo der Pod gerade liegt.
 

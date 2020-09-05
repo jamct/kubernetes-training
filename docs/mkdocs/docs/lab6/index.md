@@ -161,7 +161,7 @@ spec:
           - name: MYSQL_HOST
             value: nc-db
           - name: NEXTCLOUD_TRUSTED_DOMAINS
-            value: cloud.0.liefer.it
+            value: cloud.0.example.org
           - name: MYSQL_DATABASE
             value: nextcloud
           - name: MYSQL_USER
@@ -241,7 +241,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`cloud.0.liefer.it`)
+    - match: Host(`cloud.0.example.org`)
       kind: Rule
       services:
         - name: nc

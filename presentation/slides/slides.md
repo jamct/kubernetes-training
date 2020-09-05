@@ -124,7 +124,7 @@ Auch docker-compose ist imperativ
 
 ## Lab 1: Das eigene Cluster
 
-Alle Workshop-Inhalte finden Sie unter [docs.liefer.it](https://docs.liefer.it)
+Alle Workshop-Inhalte finden Sie unter [docs.example.org](https://docs.example.org)
 
 ![ ](https://heise.cloudimg.io/width/900/q65.png-lossy-65.webp-lossy-65.foil1/_www-heise-de_/select/ct/2016/5/1456733697045992/contentimages/image-145552165478819.jpg)
 
@@ -203,7 +203,7 @@ spec:
 
 ## Lab 3: Der erste Dienst im Cluster
 
-Alle Workshop-Inhalte finden Sie unter [docs.liefer.it](https://docs.liefer.it)
+Alle Workshop-Inhalte finden Sie unter [docs.example.org](https://docs.example.org)
 
 ---
 

@@ -366,7 +366,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`www.0.liefer.it`) && Path(`/`)
+    - match: Host(`www.0.example.org`) && Path(`/`)
       kind: Rule
       priority: 1
       services:
@@ -380,4 +380,4 @@ Der letzte Abschnitt ist Træfik-spezifisch: Die `IngressRoute` ist kein Standar
 
 Diese Objekte liest Træfik zur Laufzeit ein und arbeitet damit – er merkt sich alle Routen und beschafft direkt Zertifikate dafür.
 
-Am Ende dieses Labs sollten Sie unter https://www.0.liefer.it (Ihre Zahl einsetzen) einen Nginx mit Zertifikat sehen! Um die Erneuerung in drei Monaten kümmert sich Træfik.
+Am Ende dieses Labs sollten Sie unter https://www.0.example.org (Ihre Zahl einsetzen) einen Nginx mit Zertifikat sehen! Um die Erneuerung in drei Monaten kümmert sich Træfik.
